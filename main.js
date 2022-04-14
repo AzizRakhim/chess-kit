@@ -1,6 +1,6 @@
 let elArr = []
 
-for (let i = 8; i >= 1; i--) {
+for (let i = 1; i <= 8; i++) {
   for (let j = 1; j <= 8; j++) {
     elArr.push({y: i, x: j})
   }
@@ -11,7 +11,7 @@ let elList = document.querySelector('.chess__list');
 elArr.forEach((items) => {
   let n;
   let li = document.createElement('li');
-  li.className = "chess__item"
+  li.className = "chess__item";
   n = items.x + items.y
   if (n % 2 != 0) {
     li.classList.add('itemWhite');
@@ -19,8 +19,9 @@ elArr.forEach((items) => {
     li.classList.add('itemBlack');
   }
   li.innerHTML = `
-            <span class="span1">${items.y}</span>
-            <span class="span2">${items.x}</span>`;
+    <span class="span2">${items.x}</span>
+    <span class="span1">${items.y}</span>`;
+
   elList.appendChild(li);
 })
 
