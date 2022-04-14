@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chess {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: radial-gradient(circle, #ece3b8, #d8c187, #c79e59, #b67a2f, #a65500);
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.chess__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.chess__dosc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  height: auto;
+  transform-style: preserve-3d;
+}
+
+.chess__list {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  border: 20px solid #333;
+  transition: all 0.5s ease;
+}
+
+.anim3D {
+  transform: rotateX(45deg) scale(1.3) translateY(-50px);
+}
+
+.chess__item {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  background: #777;
+  text-align: center;
+  line-height: 100px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.itemBlack {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: #b58863;
+  z-index: 3;
+}
+
+.itemWhite {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: #f0d9b5;
+  z-index: 2;
+}
+
+.green {
+  position: relative;
+  box-shadow: 0 0 30px 13px #05e40d inset;
+  z-index: 4;
+  transition: all 0.1s ease;
+}
+
+.movitem2 {
+  position: relative;
+  color: #fff;
+  box-shadow: 0px 0px 31px 13px #ff2929 inset;
+  transition: all 0.1s ease;
+  z-index: 5;
+}
+
+.movItem {
+  position: relative;
+  color: #fff;
+  box-shadow: 0 0 1px 1px #fff inset;
+  transition: all 0.1s ease;
+  z-index: 5;
+}
+
+.form1 {
+  position: relative;
+  box-shadow: 0px 0px 31px 13px #ff2929 inset;
+  z-index: 5;
+  transition: all 0.1s ease;
+}
+
+.form2 {
+  position: relative;
+  box-shadow: 0px 0px 31px 13px #ff2929 inset;
+  z-index: 5;
+  transition: all 0.1s ease;
+}
+
+.form3 {
+  position: relative;
+  box-shadow: 0px 0px 31px 13px #ff2929 inset;
+  z-index: 5;
+  transition: all 0.1s ease;
+}
+
+.form4 {
+  position: relative;
+  box-shadow: 0px 0px 31px 13px #ff2929 inset;
+  z-index: 5;
+  transition: all 0.1s ease;
+}
+
+.form5 {
+  position: relative;
+  box-shadow: 0px 0px 31px 13px #ff2929 inset;
+  z-index: 5;
+  transition: all 0.1s ease;
+}
+
+.form6 {
+  position: relative;
+  box-shadow: 0px 0px 31px 13px #ff2929 inset;
+  z-index: 5;
+  transition: all 0.1s ease;
+}
+
+.span1,
+.span2 {
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+.chess__forms {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ches__forms-btns {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #a75900;
+  margin-bottom: 20px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.forms__act {
+  background: orange;
+}
+
+.ches__forms-btns img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shess__y-tit {
+  padding: 5px;
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  font-family: sans-serif;
+  font-size: 32px;
+  background: #fff;
+  color: #a65500;
+}
+
+.shess__x-tit {
+  padding: 5px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  font-family: sans-serif;
+  font-size: 32px;
+  background: #fff;
+  color: #a65500;
+}
+
+.chess__3d {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fcb463;
+  background: #fff;
+  border: 1px solid #a75900;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
