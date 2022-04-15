@@ -1,19 +1,17 @@
-let elArr = []
+let elArr = [];
 
 for (let i = 1; i <= 8; i++) {
   for (let j = 1; j <= 8; j++) {
-    elArr.push({y: i, x: j})
+    elArr.push({y: i, x: j});
   }
 }
 
 let elList = document.querySelector('.chess__list');
 
 elArr.forEach((items) => {
-  let n;
   let li = document.createElement('li');
   li.className = "chess__item";
-  n = items.x + items.y
-  if (n % 2 != 0) {
+  if ((items.x + items.y) % 2 != 0) {
     li.classList.add('itemWhite');
   } else {
     li.classList.add('itemBlack');
@@ -40,14 +38,14 @@ let chessBtn4 = document.querySelector('#chess__btn4');
 let chessBtn5 = document.querySelector('#chess__btn5');
 let chessBtn6 = document.querySelector('#chess__btn6');
 
+let elBtns = document.querySelectorAll('.ches__forms-btns');
+
 function turan() {
   chessBtn1.addEventListener('click', () => {
+    elBtns.forEach((elements) => {
+      elements.classList.remove("forms__act");
+    });
     chessBtn1.classList.add('forms__act');
-    chessBtn2.classList.remove('forms__act');
-    chessBtn3.classList.remove('forms__act');
-    chessBtn4.classList.remove('forms__act');
-    chessBtn5.classList.remove('forms__act');
-    chessBtn6.classList.remove('forms__act');
 
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
@@ -488,18 +486,4 @@ elList.addEventListener('mouseout', () => {
     xNum.innerHTML = "0";
     yNum.innerHTML = "0";
   })
-})
-
-let anim3D = document.querySelector('.chess__3d');
-let cou = 1
-anim3D.addEventListener('click', () => {
-  elList.classList.toggle('anim3D')
-  if (cou == 1) {
-    anim3D.textContent = '2D'
-    cou++
-  }
-  else {
-    anim3D.textContent = '3D'
-    cou = 1
-  }
 })
