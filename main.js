@@ -40,33 +40,33 @@ let chessBtn6 = document.querySelector('#chess__btn6');
 
 let elBtns = document.querySelectorAll('.ches__forms-btns');
 
-function turan() {
+function btnOne() {
   chessBtn1.addEventListener('click', () => {
     elBtns.forEach((elements) => {
-      elements.classList.remove("forms__act");
+      elements.classList.remove("orange");
     });
-    chessBtn1.classList.add('forms__act');
+    chessBtn1.classList.add('orange');
 
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
-        e.classList.remove('form1')
+        e.classList.remove('btn1')
       })
       e.addEventListener('mouseover', () => {
-        items.forEach((ee) => {
-          ee.classList.remove('form1')
-          ee.classList.remove('form2')
-          ee.classList.remove('form3')
-          ee.classList.remove('form4')
-          ee.classList.remove('form5')
-          ee.classList.remove('form6')
+        items.forEach((event) => {
+          event.classList.remove('btn1')
+          event.classList.remove('btn2')
+          event.classList.remove('btn3')
+          event.classList.remove('btn4')
+          event.classList.remove('btn5')
+          event.classList.remove('btn6')
           e.classList.remove('movItem')
         })
         e.classList.add('movItem')
-        e.classList.add('form1')
+        e.classList.add('btn1')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn1.addEventListener('click', forms1(x, y))
+        chessBtn1.addEventListener('click', btnsOne(x, y))
         if (count == 1) {
           count++
         } else {
@@ -76,37 +76,37 @@ function turan() {
       e.classList.remove('movItem')
     })
   })
-} turan()
+} btnOne()
 
-function hourse() {
+function btnTwo() {
   chessBtn2.addEventListener('click', () => {
-    chessBtn1.classList.remove('forms__act');
-    chessBtn2.classList.add('forms__act');
-    chessBtn3.classList.remove('forms__act');
-    chessBtn4.classList.remove('forms__act');
-    chessBtn5.classList.remove('forms__act');
-    chessBtn6.classList.remove('forms__act');
+    chessBtn1.classList.remove('orange');
+    chessBtn2.classList.add('orange');
+    chessBtn3.classList.remove('orange');
+    chessBtn4.classList.remove('orange');
+    chessBtn5.classList.remove('orange');
+    chessBtn6.classList.remove('orange');
 
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
-        e.classList.remove('form2')
+        e.classList.remove('btn2')
       })
       e.addEventListener('mouseover', () => {
         items.forEach((ee) => {
-          ee.classList.remove('form1')
-          ee.classList.remove('form2')
-          ee.classList.remove('form3')
-          ee.classList.remove('form4')
-          ee.classList.remove('form5')
-          ee.classList.remove('form6')
+          ee.classList.remove('btn1')
+          ee.classList.remove('btn2')
+          ee.classList.remove('btn3')
+          ee.classList.remove('btn4')
+          ee.classList.remove('btn5')
+          ee.classList.remove('btn6')
           e.classList.remove('movItem')
         })
         e.classList.add('movItem')
-        e.classList.add('form2')
+        e.classList.add('btn2')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn1.addEventListener('click', forms2(x, y))
+        chessBtn1.addEventListener('click', btnsTwo(x, y))
         if (count == 1) {
           count++
         } else {
@@ -116,40 +116,40 @@ function hourse() {
       e.classList.remove('movItem')
     })
   })
-} hourse()
+} btnTwo()
 
 
-function bishop() {
+function btnThree() {
   chessBtn3.addEventListener('click', () => {
-    chessBtn1.classList.remove('forms__act');
-    chessBtn2.classList.remove('forms__act');
-    chessBtn3.classList.add('forms__act');
-    chessBtn4.classList.remove('forms__act');
-    chessBtn5.classList.remove('forms__act');
-    chessBtn6.classList.remove('forms__act');
+    chessBtn1.classList.remove('orange');
+    chessBtn2.classList.remove('orange');
+    chessBtn3.classList.add('orange');
+    chessBtn4.classList.remove('orange');
+    chessBtn5.classList.remove('orange');
+    chessBtn6.classList.remove('orange');
 
     
 
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
-        e.classList.remove('form3')
+        e.classList.remove('btn3')
       })
       e.addEventListener('mouseover', () => {
         items.forEach((ee) => {
-          ee.classList.remove('form1')
-          ee.classList.remove('form2')
-          ee.classList.remove('form3')
-          ee.classList.remove('form4')
-          ee.classList.remove('form5')
-          ee.classList.remove('form6')
+          ee.classList.remove('btn1')
+          ee.classList.remove('btn2')
+          ee.classList.remove('btn3')
+          ee.classList.remove('btn4')
+          ee.classList.remove('btn5')
+          ee.classList.remove('btn6')
           e.classList.remove('movItem')
         })
         e.classList.add('movItem')
-        e.classList.add('form3')
+        e.classList.add('btn3')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn3.addEventListener('click', forms3(x, y))
+        chessBtn3.addEventListener('click', btnsThree(x, y))
         if (count == 1) {
           count++
         } else {
@@ -159,38 +159,38 @@ function bishop() {
       e.classList.remove('movItem')
     })
   })
-} bishop()
+} btnThree()
 
 
-function quenn() {
+function btnFour() {
   chessBtn4.addEventListener('click', () => {
-    chessBtn1.classList.remove('forms__act');
-    chessBtn2.classList.remove('forms__act');
-    chessBtn3.classList.remove('forms__act');
-    chessBtn4.classList.add('forms__act');
-    chessBtn5.classList.remove('forms__act');
-    chessBtn6.classList.remove('forms__act');
+    chessBtn1.classList.remove('orange');
+    chessBtn2.classList.remove('orange');
+    chessBtn3.classList.remove('orange');
+    chessBtn4.classList.add('orange');
+    chessBtn5.classList.remove('orange');
+    chessBtn6.classList.remove('orange');
 
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
-        e.classList.remove('form4')
+        e.classList.remove('btn4')
       })
       e.addEventListener('mouseover', () => {
         items.forEach((ee) => {
-          ee.classList.remove('form1')
-          ee.classList.remove('form2')
-          ee.classList.remove('form3')
-          ee.classList.remove('form4')
-          ee.classList.remove('form5')
-          ee.classList.remove('form6')
+          ee.classList.remove('btn1')
+          ee.classList.remove('btn2')
+          ee.classList.remove('btn3')
+          ee.classList.remove('btn4')
+          ee.classList.remove('btn5')
+          ee.classList.remove('btn6')
           e.classList.remove('movItem')
         })
         e.classList.add('movItem')
-        e.classList.add('form4')
+        e.classList.add('btn4')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn4.addEventListener('click', forms4(x, y))
+        chessBtn4.addEventListener('click', btnsFour(x, y))
         if (count == 1) {
           count++
         } else {
@@ -200,38 +200,38 @@ function quenn() {
       e.classList.remove('movItem')
     })
   })
-} quenn()
+} btnFour()
 
 
-function king() {
+function btnFive() {
   chessBtn5.addEventListener('click', () => {
-    chessBtn1.classList.remove('forms__act');
-    chessBtn2.classList.remove('forms__act');
-    chessBtn3.classList.remove('forms__act');
-    chessBtn4.classList.remove('forms__act');
-    chessBtn5.classList.add('forms__act');
-    chessBtn6.classList.remove('forms__act');
+    chessBtn1.classList.remove('orange');
+    chessBtn2.classList.remove('orange');
+    chessBtn3.classList.remove('orange');
+    chessBtn4.classList.remove('orange');
+    chessBtn5.classList.add('orange');
+    chessBtn6.classList.remove('orange');
 
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
-        e.classList.remove('form5')
+        e.classList.remove('btn5')
       })
       e.addEventListener('mouseover', () => {
         items.forEach((ee) => {
-          ee.classList.remove('form1')
-          ee.classList.remove('form2')
-          ee.classList.remove('form3')
-          ee.classList.remove('form4')
-          ee.classList.remove('form5')
-          ee.classList.remove('form6')
+          ee.classList.remove('btn1')
+          ee.classList.remove('btn2')
+          ee.classList.remove('btn3')
+          ee.classList.remove('btn4')
+          ee.classList.remove('btn5')
+          ee.classList.remove('btn6')
           e.classList.remove('movItem')
         })
         e.classList.add('movItem')
-        e.classList.add('form5')
+        e.classList.add('btn5')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn5.addEventListener('click', forms5(x, y))
+        chessBtn5.addEventListener('click', btnsFive(x, y))
         if (count == 1) {
           count++
         } else {
@@ -241,49 +241,49 @@ function king() {
       e.classList.remove('movItem')
     })
   })
-} king()
+} btnFive()
 
-function paw() {
+function btnSix() {
   chessBtn6.addEventListener('click', () => {
-    chessBtn1.classList.remove('forms__act');
-    chessBtn2.classList.remove('forms__act');
-    chessBtn3.classList.remove('forms__act');
-    chessBtn4.classList.remove('forms__act');
-    chessBtn5.classList.remove('forms__act');
-    chessBtn6.classList.add('forms__act');
+    chessBtn1.classList.remove('orange');
+    chessBtn2.classList.remove('orange');
+    chessBtn3.classList.remove('orange');
+    chessBtn4.classList.remove('orange');
+    chessBtn5.classList.remove('orange');
+    chessBtn6.classList.add('orange');
 
     
 
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
-        e.classList.remove('form6')
+        e.classList.remove('btn6')
       })
       e.addEventListener('mouseover', () => {
         items.forEach((ee) => {
-          ee.classList.remove('form1')
-          ee.classList.remove('form2')
-          ee.classList.remove('form3')
-          ee.classList.remove('form4')
-          ee.classList.remove('form5')
-          ee.classList.remove('form6')
+          ee.classList.remove('btn1')
+          ee.classList.remove('btn2')
+          ee.classList.remove('btn3')
+          ee.classList.remove('btn4')
+          ee.classList.remove('btn5')
+          ee.classList.remove('btn6')
           e.classList.remove('movItem')
         })
         e.classList.add('movItem')
-        e.classList.add('form6')
+        e.classList.add('btn6')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn6.addEventListener('click', forms6(x, y))
+        chessBtn6.addEventListener('click', btnsSix(x, y))
         if (count == 1) {
           count++
         } else {
           count = 1
         }
       })
-      e.classList.remove('form6')
+      e.classList.remove('btn6')
     })
   })
-} paw()
+} btnSix()
 
 function itemsFun() {
   items.forEach((e) => {
@@ -307,7 +307,7 @@ function itemsFun() {
 } itemsFun()
 
 
-function forms1(x, y) {
+function btnsOne(x, y) {
   items.forEach((itmm) => {
     if (itmm.childNodes[1].textContent == x || itmm.childNodes[3].textContent == y) {
       itmm.classList.add('green')
@@ -318,7 +318,7 @@ function forms1(x, y) {
   })
 }
 
-function forms2(x, y) {
+function btnsTwo(x, y) {
   items.forEach((itmm) => {
     if (itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) - 2 ||
       itmm.childNodes[1].textContent == eval(x) - 2 && itmm.childNodes[3].textContent == eval(y) - 1 ||
@@ -338,7 +338,7 @@ function forms2(x, y) {
 
 
 
-function forms3(x, y) {
+function btnsThree(x, y) {
   items.forEach((itmm) => {
     if (
       itmm.childNodes[1].textContent == x - 1 && itmm.childNodes[3].textContent == y - 1 ||
@@ -389,7 +389,7 @@ function forms3(x, y) {
 
 
 
-function forms4(x, y) {
+function btnsFour(x, y) {
   items.forEach((itmm) => {
     if (itmm.childNodes[1].textContent == x || itmm.childNodes[3].textContent == y) {
       itmm.classList.add('green')
@@ -443,7 +443,7 @@ function forms4(x, y) {
 
 
 
-function forms5(x, y) {
+function btnsFive(x, y) {
   items.forEach((itmm) => {
     if (itmm.childNodes[1].textContent == x - 1 && itmm.childNodes[3].textContent == y - 1 ||
       itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) + 1 ||
@@ -462,7 +462,7 @@ function forms5(x, y) {
   })
 }
 
-function forms6(x, y) {
+function btnsSix(x, y) {
   items.forEach((itmm) => {
     if (itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) && itmm.childNodes[1].textContent != x && x != 1 ||
       x == 2 && itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y)) {
@@ -477,12 +477,12 @@ function forms6(x, y) {
 elList.addEventListener('mouseout', () => {
   items.forEach((im) => {
     im.classList.remove('green')
-    im.classList.remove('form1')
-    im.classList.remove('form2')
-    im.classList.remove('form3')
-    im.classList.remove('form4')
-    im.classList.remove('form5')
-    im.classList.remove('form6')
+    im.classList.remove('btn1')
+    im.classList.remove('btn2')
+    im.classList.remove('btn3')
+    im.classList.remove('btn4')
+    im.classList.remove('btn5')
+    im.classList.remove('btn6')
     xNum.innerHTML = "0";
     yNum.innerHTML = "0";
   })
