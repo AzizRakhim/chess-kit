@@ -29,7 +29,6 @@ let span2 = document.querySelectorAll('.span2');
 let yNum = document.querySelector('.y-num');
 let xNum = document.querySelector('.x-num');
 let x, y;
-let count = 1;
 
 let chessBtn1 = document.querySelector('#chess__btn1');
 let chessBtn2 = document.querySelector('#chess__btn2');
@@ -40,250 +39,129 @@ let chessBtn6 = document.querySelector('#chess__btn6');
 
 let elBtns = document.querySelectorAll('.ches__forms-btns');
 
+elBtns.forEach((item) => {
+  item.addEventListener("click", () => {
+    elBtns.forEach((value) => {
+      value.classList.remove("orange");
+    });
+    item.classList.add('orange');
+  })
+});
+
 function btnOne() {
   chessBtn1.addEventListener('click', () => {
-    elBtns.forEach((elements) => {
-      elements.classList.remove("orange");
-    });
-    chessBtn1.classList.add('orange');
-
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
         e.classList.remove('btn1')
       })
       e.addEventListener('mouseover', () => {
-        items.forEach((event) => {
-          event.classList.remove('btn1')
-          event.classList.remove('btn2')
-          event.classList.remove('btn3')
-          event.classList.remove('btn4')
-          event.classList.remove('btn5')
-          event.classList.remove('btn6')
-          e.classList.remove('movItem')
-        })
-        e.classList.add('movItem')
         e.classList.add('btn1')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn1.addEventListener('click', btnsOne(x, y))
-        if (count == 1) {
-          count++
-        } else {
-          count = 1
-        }
+        btnsOne(x, y);
       })
-      e.classList.remove('movItem')
     })
   })
-} btnOne()
+} 
+
+btnOne()
 
 function btnTwo() {
   chessBtn2.addEventListener('click', () => {
-    chessBtn1.classList.remove('orange');
-    chessBtn2.classList.add('orange');
-    chessBtn3.classList.remove('orange');
-    chessBtn4.classList.remove('orange');
-    chessBtn5.classList.remove('orange');
-    chessBtn6.classList.remove('orange');
-
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
         e.classList.remove('btn2')
       })
       e.addEventListener('mouseover', () => {
-        items.forEach((ee) => {
-          ee.classList.remove('btn1')
-          ee.classList.remove('btn2')
-          ee.classList.remove('btn3')
-          ee.classList.remove('btn4')
-          ee.classList.remove('btn5')
-          ee.classList.remove('btn6')
-          e.classList.remove('movItem')
-        })
         e.classList.add('movItem')
         e.classList.add('btn2')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn1.addEventListener('click', btnsTwo(x, y))
-        if (count == 1) {
-          count++
-        } else {
-          count = 1
-        }
+        btnsTwo(x, y);
       })
-      e.classList.remove('movItem')
     })
   })
-} btnTwo()
+} 
 
+btnTwo()
 
 function btnThree() {
   chessBtn3.addEventListener('click', () => {
-    chessBtn1.classList.remove('orange');
-    chessBtn2.classList.remove('orange');
-    chessBtn3.classList.add('orange');
-    chessBtn4.classList.remove('orange');
-    chessBtn5.classList.remove('orange');
-    chessBtn6.classList.remove('orange');
-
-    
-
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
         e.classList.remove('btn3')
       })
       e.addEventListener('mouseover', () => {
-        items.forEach((ee) => {
-          ee.classList.remove('btn1')
-          ee.classList.remove('btn2')
-          ee.classList.remove('btn3')
-          ee.classList.remove('btn4')
-          ee.classList.remove('btn5')
-          ee.classList.remove('btn6')
-          e.classList.remove('movItem')
-        })
-        e.classList.add('movItem')
         e.classList.add('btn3')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn3.addEventListener('click', btnsThree(x, y))
-        if (count == 1) {
-          count++
-        } else {
-          count = 1
-        }
+        btnsThree(x, y);
       })
-      e.classList.remove('movItem')
     })
   })
-} btnThree()
+} 
 
+btnThree()
 
 function btnFour() {
   chessBtn4.addEventListener('click', () => {
-    chessBtn1.classList.remove('orange');
-    chessBtn2.classList.remove('orange');
-    chessBtn3.classList.remove('orange');
-    chessBtn4.classList.add('orange');
-    chessBtn5.classList.remove('orange');
-    chessBtn6.classList.remove('orange');
-
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
         e.classList.remove('btn4')
       })
       e.addEventListener('mouseover', () => {
-        items.forEach((ee) => {
-          ee.classList.remove('btn1')
-          ee.classList.remove('btn2')
-          ee.classList.remove('btn3')
-          ee.classList.remove('btn4')
-          ee.classList.remove('btn5')
-          ee.classList.remove('btn6')
-          e.classList.remove('movItem')
-        })
-        e.classList.add('movItem')
         e.classList.add('btn4')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn4.addEventListener('click', btnsFour(x, y))
-        if (count == 1) {
-          count++
-        } else {
-          count = 1
-        }
+        btnsFour(x, y);
       })
-      e.classList.remove('movItem')
     })
   })
-} btnFour()
+} 
 
+btnFour()
 
 function btnFive() {
   chessBtn5.addEventListener('click', () => {
-    chessBtn1.classList.remove('orange');
-    chessBtn2.classList.remove('orange');
-    chessBtn3.classList.remove('orange');
-    chessBtn4.classList.remove('orange');
-    chessBtn5.classList.add('orange');
-    chessBtn6.classList.remove('orange');
-
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
         e.classList.remove('btn5')
       })
       e.addEventListener('mouseover', () => {
-        items.forEach((ee) => {
-          ee.classList.remove('btn1')
-          ee.classList.remove('btn2')
-          ee.classList.remove('btn3')
-          ee.classList.remove('btn4')
-          ee.classList.remove('btn5')
-          ee.classList.remove('btn6')
-          e.classList.remove('movItem')
-        })
-        e.classList.add('movItem')
         e.classList.add('btn5')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn5.addEventListener('click', btnsFive(x, y))
-        if (count == 1) {
-          count++
-        } else {
-          count = 1
-        }
+        btnsFive(x, y);
       })
-      e.classList.remove('movItem')
     })
   })
-} btnFive()
+} 
+
+btnFive()
 
 function btnSix() {
   chessBtn6.addEventListener('click', () => {
-    chessBtn1.classList.remove('orange');
-    chessBtn2.classList.remove('orange');
-    chessBtn3.classList.remove('orange');
-    chessBtn4.classList.remove('orange');
-    chessBtn5.classList.remove('orange');
-    chessBtn6.classList.add('orange');
-
-    
-
     items.forEach((e) => {
       e.addEventListener('mouseout', () => {
         e.classList.remove('btn6')
       })
       e.addEventListener('mouseover', () => {
-        items.forEach((ee) => {
-          ee.classList.remove('btn1')
-          ee.classList.remove('btn2')
-          ee.classList.remove('btn3')
-          ee.classList.remove('btn4')
-          ee.classList.remove('btn5')
-          ee.classList.remove('btn6')
-          e.classList.remove('movItem')
-        })
-        e.classList.add('movItem')
         e.classList.add('btn6')
         x = e.childNodes[1].textContent;
         y = e.childNodes[3].textContent;
 
-        chessBtn6.addEventListener('click', btnsSix(x, y))
-        if (count == 1) {
-          count++
-        } else {
-          count = 1
-        }
+        btnsSix(x, y);
       })
-      e.classList.remove('btn6')
     })
   })
-} btnSix()
+} 
+
+btnSix()
 
 function itemsFun() {
   items.forEach((e) => {
@@ -302,10 +180,8 @@ function itemsFun() {
       yNum.innerHTML = e.childNodes[3].textContent;
     })
     e.classList.remove('movitem2')
-    e.classList.remove('movItem')
   })
 } itemsFun()
-
 
 function btnsOne(x, y) {
   items.forEach((itmm) => {
@@ -320,14 +196,14 @@ function btnsOne(x, y) {
 
 function btnsTwo(x, y) {
   items.forEach((itmm) => {
-    if (itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) - 2 ||
-      itmm.childNodes[1].textContent == eval(x) - 2 && itmm.childNodes[3].textContent == eval(y) - 1 ||
-      itmm.childNodes[1].textContent == eval(x) - 2 && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) + 2 ||
-      itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) - 2 ||
-      itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) + 2 ||
-      itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y) - 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y) + 1) {
+    if (itmm.childNodes[1].textContent == +(x) - 1 && itmm.childNodes[3].textContent == +(y) - 2 ||
+      itmm.childNodes[1].textContent == +(x) - 2 && itmm.childNodes[3].textContent == +(y) - 1 ||
+      itmm.childNodes[1].textContent == +(x) - 2 && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) - 1 && itmm.childNodes[3].textContent == +(y) + 2 ||
+      itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) - 2 ||
+      itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) + 2 ||
+      itmm.childNodes[1].textContent == +(x) + 2 && itmm.childNodes[3].textContent == +(y) - 1 ||
+      itmm.childNodes[1].textContent == +(x) + 2 && itmm.childNodes[3].textContent == +(y) + 1) {
       itmm.classList.add('green')
     }
     else {
@@ -335,8 +211,6 @@ function btnsTwo(x, y) {
     }
   })
 }
-
-
 
 function btnsThree(x, y) {
   items.forEach((itmm) => {
@@ -347,38 +221,34 @@ function btnsThree(x, y) {
       itmm.childNodes[1].textContent == x - 4 && itmm.childNodes[3].textContent == y - 4 ||
       itmm.childNodes[1].textContent == x - 5 && itmm.childNodes[3].textContent == y - 5 ||
       itmm.childNodes[1].textContent == x - 6 && itmm.childNodes[3].textContent == y - 6 ||
-      itmm.childNodes[1].textContent == x - 7 && itmm.childNodes[3].textContent == y - 7 ||
-      itmm.childNodes[1].textContent == x - 8 && itmm.childNodes[3].textContent == y - 8) {
+      itmm.childNodes[1].textContent == x - 7 && itmm.childNodes[3].textContent == y - 7) {
       itmm.classList.add('green')
     }
-    else if (itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y) + 2 ||
-      itmm.childNodes[1].textContent == eval(x) + 3 && itmm.childNodes[3].textContent == eval(y) + 3 ||
-      itmm.childNodes[1].textContent == eval(x) + 4 && itmm.childNodes[3].textContent == eval(y) + 4 ||
-      itmm.childNodes[1].textContent == eval(x) + 5 && itmm.childNodes[3].textContent == eval(y) + 5 ||
-      itmm.childNodes[1].textContent == eval(x) + 6 && itmm.childNodes[3].textContent == eval(y) + 6 ||
-      itmm.childNodes[1].textContent == eval(x) + 7 && itmm.childNodes[3].textContent == eval(y) + 7 ||
-      itmm.childNodes[1].textContent == eval(x) + 8 && itmm.childNodes[3].textContent == eval(y) + 8) {
+    else if (itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) + 2 && itmm.childNodes[3].textContent == +(y) + 2 ||
+      itmm.childNodes[1].textContent == +(x) + 3 && itmm.childNodes[3].textContent == +(y) + 3 ||
+      itmm.childNodes[1].textContent == +(x) + 4 && itmm.childNodes[3].textContent == +(y) + 4 ||
+      itmm.childNodes[1].textContent == +(x) + 5 && itmm.childNodes[3].textContent == +(y) + 5 ||
+      itmm.childNodes[1].textContent == +(x) + 6 && itmm.childNodes[3].textContent == +(y) + 6 ||
+      itmm.childNodes[1].textContent == +(x) + 7 && itmm.childNodes[3].textContent == +(y) + 7) {
       itmm.classList.add('green')
     }
     else if (itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) - 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y) - 2 ||
-      itmm.childNodes[1].textContent == eval(x) + 3 && itmm.childNodes[3].textContent == eval(y) - 3 ||
-      itmm.childNodes[1].textContent == eval(x) + 4 && itmm.childNodes[3].textContent == eval(y) - 4 ||
-      itmm.childNodes[1].textContent == eval(x) + 5 && itmm.childNodes[3].textContent == eval(y) - 5 ||
-      itmm.childNodes[1].textContent == eval(x) + 6 && itmm.childNodes[3].textContent == eval(y) - 6 ||
-      itmm.childNodes[1].textContent == eval(x) + 7 && itmm.childNodes[3].textContent == eval(y) - 7 ||
-      itmm.childNodes[1].textContent == eval(x) + 8 && itmm.childNodes[3].textContent == eval(y) - 8) {
+      itmm.childNodes[1].textContent == +(x) + 2 && itmm.childNodes[3].textContent == +(y) - 2 ||
+      itmm.childNodes[1].textContent == +(x) + 3 && itmm.childNodes[3].textContent == +(y) - 3 ||
+      itmm.childNodes[1].textContent == +(x) + 4 && itmm.childNodes[3].textContent == +(y) - 4 ||
+      itmm.childNodes[1].textContent == +(x) + 5 && itmm.childNodes[3].textContent == +(y) - 5 ||
+      itmm.childNodes[1].textContent == +(x) + 6 && itmm.childNodes[3].textContent == +(y) - 6 ||
+      itmm.childNodes[1].textContent == +(x) + 7 && itmm.childNodes[3].textContent == +(y) - 7) {
       itmm.classList.add('green')
     }
-    else if (itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) - 2 && itmm.childNodes[3].textContent == eval(y) + 2 ||
-      itmm.childNodes[1].textContent == eval(x) - 3 && itmm.childNodes[3].textContent == eval(y) + 3 ||
-      itmm.childNodes[1].textContent == eval(x) - 4 && itmm.childNodes[3].textContent == eval(y) + 4 ||
-      itmm.childNodes[1].textContent == eval(x) - 5 && itmm.childNodes[3].textContent == eval(y) + 5 ||
-      itmm.childNodes[1].textContent == eval(x) - 6 && itmm.childNodes[3].textContent == eval(y) + 6 ||
-      itmm.childNodes[1].textContent == eval(x) - 7 && itmm.childNodes[3].textContent == eval(y) + 7 ||
-      itmm.childNodes[1].textContent == eval(x) - 8 && itmm.childNodes[3].textContent == eval(y) + 8) {
+    else if (itmm.childNodes[1].textContent == +(x) - 1 && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) - 2 && itmm.childNodes[3].textContent == +(y) + 2 ||
+      itmm.childNodes[1].textContent == +(x) - 3 && itmm.childNodes[3].textContent == +(y) + 3 ||
+      itmm.childNodes[1].textContent == +(x) - 4 && itmm.childNodes[3].textContent == +(y) + 4 ||
+      itmm.childNodes[1].textContent == +(x) - 5 && itmm.childNodes[3].textContent == +(y) + 5 ||
+      itmm.childNodes[1].textContent == +(x) - 6 && itmm.childNodes[3].textContent == +(y) + 6 ||
+      itmm.childNodes[1].textContent == +(x) - 7 && itmm.childNodes[3].textContent == +(y) + 7) {
       itmm.classList.add('green')
     }
     else {
@@ -386,53 +256,47 @@ function btnsThree(x, y) {
     }
   })
 }
-
-
 
 function btnsFour(x, y) {
   items.forEach((itmm) => {
     if (itmm.childNodes[1].textContent == x || itmm.childNodes[3].textContent == y) {
       itmm.classList.add('green')
     }
-    else if (
+    else if(
       itmm.childNodes[1].textContent == x - 1 && itmm.childNodes[3].textContent == y - 1 ||
       itmm.childNodes[1].textContent == x - 2 && itmm.childNodes[3].textContent == y - 2 ||
       itmm.childNodes[1].textContent == x - 3 && itmm.childNodes[3].textContent == y - 3 ||
       itmm.childNodes[1].textContent == x - 4 && itmm.childNodes[3].textContent == y - 4 ||
       itmm.childNodes[1].textContent == x - 5 && itmm.childNodes[3].textContent == y - 5 ||
       itmm.childNodes[1].textContent == x - 6 && itmm.childNodes[3].textContent == y - 6 ||
-      itmm.childNodes[1].textContent == x - 7 && itmm.childNodes[3].textContent == y - 7 ||
-      itmm.childNodes[1].textContent == x - 8 && itmm.childNodes[3].textContent == y - 8) {
+      itmm.childNodes[1].textContent == x - 7 && itmm.childNodes[3].textContent == y - 7) {
       itmm.classList.add('green')
     }
-    else if (itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y) + 2 ||
-      itmm.childNodes[1].textContent == eval(x) + 3 && itmm.childNodes[3].textContent == eval(y) + 3 ||
-      itmm.childNodes[1].textContent == eval(x) + 4 && itmm.childNodes[3].textContent == eval(y) + 4 ||
-      itmm.childNodes[1].textContent == eval(x) + 5 && itmm.childNodes[3].textContent == eval(y) + 5 ||
-      itmm.childNodes[1].textContent == eval(x) + 6 && itmm.childNodes[3].textContent == eval(y) + 6 ||
-      itmm.childNodes[1].textContent == eval(x) + 7 && itmm.childNodes[3].textContent == eval(y) + 7 ||
-      itmm.childNodes[1].textContent == eval(x) + 8 && itmm.childNodes[3].textContent == eval(y) + 8) {
+    else if (itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) + 2 && itmm.childNodes[3].textContent == +(y) + 2 ||
+      itmm.childNodes[1].textContent == +(x) + 3 && itmm.childNodes[3].textContent == +(y) + 3 ||
+      itmm.childNodes[1].textContent == +(x) + 4 && itmm.childNodes[3].textContent == +(y) + 4 ||
+      itmm.childNodes[1].textContent == +(x) + 5 && itmm.childNodes[3].textContent == +(y) + 5 ||
+      itmm.childNodes[1].textContent == +(x) + 6 && itmm.childNodes[3].textContent == +(y) + 6 ||
+      itmm.childNodes[1].textContent == +(x) + 7 && itmm.childNodes[3].textContent == +(y) + 7) {
       itmm.classList.add('green')
     }
-    else if (itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) - 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y) - 2 ||
-      itmm.childNodes[1].textContent == eval(x) + 3 && itmm.childNodes[3].textContent == eval(y) - 3 ||
-      itmm.childNodes[1].textContent == eval(x) + 4 && itmm.childNodes[3].textContent == eval(y) - 4 ||
-      itmm.childNodes[1].textContent == eval(x) + 5 && itmm.childNodes[3].textContent == eval(y) - 5 ||
-      itmm.childNodes[1].textContent == eval(x) + 6 && itmm.childNodes[3].textContent == eval(y) - 6 ||
-      itmm.childNodes[1].textContent == eval(x) + 7 && itmm.childNodes[3].textContent == eval(y) - 7 ||
-      itmm.childNodes[1].textContent == eval(x) + 8 && itmm.childNodes[3].textContent == eval(y) - 8) {
+    else if (itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) - 1 ||
+      itmm.childNodes[1].textContent == +(x) + 2 && itmm.childNodes[3].textContent == +(y) - 2 ||
+      itmm.childNodes[1].textContent == +(x) + 3 && itmm.childNodes[3].textContent == +(y) - 3 ||
+      itmm.childNodes[1].textContent == +(x) + 4 && itmm.childNodes[3].textContent == +(y) - 4 ||
+      itmm.childNodes[1].textContent == +(x) + 5 && itmm.childNodes[3].textContent == +(y) - 5 ||
+      itmm.childNodes[1].textContent == +(x) + 6 && itmm.childNodes[3].textContent == +(y) - 6 ||
+      itmm.childNodes[1].textContent == +(x) + 7 && itmm.childNodes[3].textContent == +(y) - 7) {
       itmm.classList.add('green')
     }
-    else if (itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) - 2 && itmm.childNodes[3].textContent == eval(y) + 2 ||
-      itmm.childNodes[1].textContent == eval(x) - 3 && itmm.childNodes[3].textContent == eval(y) + 3 ||
-      itmm.childNodes[1].textContent == eval(x) - 4 && itmm.childNodes[3].textContent == eval(y) + 4 ||
-      itmm.childNodes[1].textContent == eval(x) - 5 && itmm.childNodes[3].textContent == eval(y) + 5 ||
-      itmm.childNodes[1].textContent == eval(x) - 6 && itmm.childNodes[3].textContent == eval(y) + 6 ||
-      itmm.childNodes[1].textContent == eval(x) - 7 && itmm.childNodes[3].textContent == eval(y) + 7 ||
-      itmm.childNodes[1].textContent == eval(x) - 8 && itmm.childNodes[3].textContent == eval(y) + 8) {
+    else if (itmm.childNodes[1].textContent == +(x) - 1 && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) - 2 && itmm.childNodes[3].textContent == +(y) + 2 ||
+      itmm.childNodes[1].textContent == +(x) - 3 && itmm.childNodes[3].textContent == +(y) + 3 ||
+      itmm.childNodes[1].textContent == +(x) - 4 && itmm.childNodes[3].textContent == +(y) + 4 ||
+      itmm.childNodes[1].textContent == +(x) - 5 && itmm.childNodes[3].textContent == +(y) + 5 ||
+      itmm.childNodes[1].textContent == +(x) - 6 && itmm.childNodes[3].textContent == +(y) + 6 ||
+      itmm.childNodes[1].textContent == +(x) - 7 && itmm.childNodes[3].textContent == +(y) + 7) {
       itmm.classList.add('green')
     }
     else {
@@ -441,22 +305,18 @@ function btnsFour(x, y) {
   })
 }
 
-
-
 function btnsFive(x, y) {
   items.forEach((itmm) => {
     if (itmm.childNodes[1].textContent == x - 1 && itmm.childNodes[3].textContent == y - 1 ||
-      itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) + 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) ||
-      itmm.childNodes[1].textContent == eval(x) - 1 && itmm.childNodes[3].textContent == eval(y) ||
-      itmm.childNodes[1].textContent == eval(x) && itmm.childNodes[3].textContent == eval(y) - 1 ||
-      itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) - 1
-    ) {
+      itmm.childNodes[1].textContent == +(x) - 1 && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) + 1 ||
+      itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) ||
+      itmm.childNodes[1].textContent == +(x) - 1 && itmm.childNodes[3].textContent == +(y) ||
+      itmm.childNodes[1].textContent == +(x) && itmm.childNodes[3].textContent == +(y) - 1 ||
+      itmm.childNodes[1].textContent == +(x) + 1 && itmm.childNodes[3].textContent == +(y) - 1) {
       itmm.classList.add('green')
-    }
-    else {
+    } else {
       itmm.classList.remove('green')
     }
   })
@@ -464,8 +324,11 @@ function btnsFive(x, y) {
 
 function btnsSix(x, y) {
   items.forEach((itmm) => {
-    if (itmm.childNodes[1].textContent == eval(x) + 1 && itmm.childNodes[3].textContent == eval(y) && itmm.childNodes[1].textContent != x && x != 1 ||
-      x == 2 && itmm.childNodes[1].textContent == eval(x) + 2 && itmm.childNodes[3].textContent == eval(y)) {
+    if(y == 7 && itmm.childNodes[1].textContent == x && (itmm.childNodes[3].textContent == y - 1 || itmm.childNodes[3].textContent == y - 2 && itmm.childNodes[1].textContent == x)){
+      itmm.classList.add('green')
+    } else if(y == 8){
+      itmm.classList.remove('green');
+    } else if (itmm.childNodes[3].textContent == y - 1 && itmm.childNodes[1].textContent == x) {
       itmm.classList.add('green')
     }
     else {

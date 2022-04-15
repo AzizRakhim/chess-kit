@@ -99,14 +99,6 @@ body {
   z-index: 5;
 }
 
-.movItem {
-  position: relative;
-  color: #fff;
-  box-shadow: 0 0 1px 1px #fff inset;
-  transition: all 0.1s ease;
-  z-index: 5;
-}
-
 .btn1 {
   position: relative;
   box-shadow: 0px 0px 31px 13px #ff2929 inset;
