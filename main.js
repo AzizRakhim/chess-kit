@@ -344,3 +344,21 @@ elList.addEventListener('mouseout', () => {
     yNum.innerHTML = "0";
   })
 })
+
+let anim3D = document.querySelector('.chess__3d');
+let cou = 1
+anim3D.addEventListener('click', () => {
+  elList.classList.toggle('anim3D')
+  if (cou == 1) {
+    anim3D.textContent = '2D';
+    anim3D.style.background = "#ffa500";
+    anim3D.style.color = "#fff";
+    cou++
+  }
+  else {
+    anim3D.textContent = '3D'
+    cou = 1
+    anim3D.style.background = "#fff";
+    anim3D.style.color = "#ffa500";
+  }
+})
