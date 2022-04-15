@@ -17,8 +17,8 @@ elArr.forEach((items) => {
     li.classList.add('itemBlack');
   }
   li.innerHTML = `
-    <span class="span2">${items.x}</span>
-    <span class="span1">${items.y}</span>`;
+    <span class="span2 d-none">${items.x}</span>
+    <span class="span1 d-none">${items.y}</span>`;
 
   elList.appendChild(li);
 })
