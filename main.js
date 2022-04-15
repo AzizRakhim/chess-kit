@@ -339,13 +339,7 @@ function btnsSix(x, y) {
 
 elList.addEventListener('mouseout', () => {
   items.forEach((im) => {
-    im.classList.remove('green')
-    im.classList.remove('btn1')
-    im.classList.remove('btn2')
-    im.classList.remove('btn3')
-    im.classList.remove('btn4')
-    im.classList.remove('btn5')
-    im.classList.remove('btn6')
+    im.classList.remove("green")
     xNum.innerHTML = "0";
     yNum.innerHTML = "0";
   })
